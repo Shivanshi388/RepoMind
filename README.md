@@ -1,7 +1,12 @@
-# RepoMind — Codebase Intelligence
+﻿# RepoMind — Codebase Intelligence
 
-RepoMind analyzes public GitHub repositories and turns their structure, symbols, dependencies, and source into an explorable engineering archive. This project contains a runnable three-phase product foundation using React + Vite and FastAPI. Deterministic analysis works without an LLM, and submitted code is never executed.
+RepoMind is an interactive codebase exploration platform for public GitHub repositories. It analyzes a commit-pinned snapshot and helps people browse files, explore file relationships, search source code, and review measured code signals.
 
+**What it offers:** file and symbol exploration; a file-level dependency map; lexical search; complexity and history-based review signals; change-impact analysis; and source-grounded questions and review tools.
+
+AI answers and semantic reranking are optional and require a local Ollama setup. Basic analysis and lexical search work without AI. Risk scores are relative review signals based on limited commit history; they are not probabilities that a file contains a defect.
+
+**Technology:** React, Vite, Python, FastAPI, MongoDB for accounts and repository summaries, Tree-sitter, scikit-learn, and optional Ollama. Sentence Transformers and FAISS are not currently part of the implementation.
 ## Implemented
 
 - Public GitHub URL validation, metadata/tree ingestion, commit-pinned archive download.
@@ -76,3 +81,4 @@ Defaults: 2,000 eligible files, 500 KB/file, 20 MB archive/source cap, 100,000 t
 ## Checks
 
 `cd backend; python -m pytest` and `cd frontend; npm run build`. See `docs/` for architecture, API routes, data model, AI safety, deployment limits and ML evaluation.
+

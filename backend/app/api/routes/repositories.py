@@ -1,11 +1,13 @@
-from fastapi import APIRouter,HTTPException,Query
+﻿from fastapi import APIRouter,HTTPException,Query,Request
 from pydantic import BaseModel,Field
 from app.core.security import parse_github_url,InvalidRepositoryURL
 from app.services.analysis import start_analysis,get_job,get_repository,search
 router=APIRouter(prefix="/repositories",tags=["repositories"])
 class AnalyzeRequest(BaseModel):url:str=Field(min_length=8,max_length=300)
 @router.post("/analyze",status_code=202)
-def analyze(body:AnalyzeRequest):
+def analyze(body:AnalyzeRequest,request:Request):
+ if not request.session.get("user_id"):
+  raise HTTPException(status_code=401,detail="Sign in with GitHub before analyzing a repository.")
  try:parse_github_url(body.url);return start_analysis(body.url)
  except InvalidRepositoryURL as e:raise HTTPException(422,str(e))
 def require(rid):
@@ -37,3 +39,4 @@ def insights(repo_id:str):
 
 @router.get("/{repo_id:path}")
 def overview(repo_id:str):return {k:v for k,v in require(repo_id).items() if k not in {"files","symbols","dependencies"}}
+

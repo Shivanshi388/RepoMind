@@ -45,7 +45,7 @@ class CompareRequest(BaseModel):base:str=Field(min_length=1,max_length=120);head
 class PullRequestBody(BaseModel):url:str=Field(min_length=20,max_length=500)
 @router.post("/{repo_id:path}/chat")
 def chat(repo_id:str,body:Question):
- r=require(repo_id);evidence=retrieve(r,body.question,limit=8,semantic=True)
+ r=require(repo_id);evidence=retrieve(r,body.question,limit=4,semantic=True)
  if not evidence:return {"answer":"I could not find relevant repository evidence for that question.","citations":[],"model_available":False}
  answer=local_chat(body.question,evidence)
  return {"answer":answer or "Local model unavailable. I found the evidence below; configure a local Ollama model to generate an explanation.","citations":[{"path":x["path"],"start_line":x["start_line"],"end_line":x["end_line"]} for x in evidence],"model_available":bool(answer),"grounded":True}
