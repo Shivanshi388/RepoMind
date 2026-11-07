@@ -1962,3 +1962,63 @@ body{
   #root .landing .capabilities{padding:16px!important}
   #root .landing .caps{gap:12px!important}
 }
+
+/* Fit landing page within a desktop viewport */
+@media (min-width:701px){
+  #root .landing{height:calc(100svh - 64px)!important;min-height:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important;padding-bottom:8px!important}
+  #root .landing>.eyebrow{flex:0 0 auto!important;margin-top:clamp(8px,1.5vh,16px)!important}
+  #root .landing>.hero{flex:1 1 auto!important;min-height:0!important;margin:clamp(8px,1.5vh,16px) 0!important;padding:clamp(14px,2vh,24px)!important;gap:clamp(18px,3vw,40px)!important}
+  #root .landing .hero h1{font-size:clamp(40px,6vh,66px)!important;line-height:.94!important;margin:clamp(8px,1.4vh,16px) 0!important}
+  #root .landing .copy{font-size:clamp(12px,1.7vh,15px)!important;line-height:1.45!important;margin-bottom:clamp(10px,1.8vh,18px)!important}
+  #root .landing .repoform{padding:clamp(9px,1.5vh,14px)!important}
+  #root .landing .inputrow button{min-height:40px!important}
+  #root .landing .art{height:clamp(280px,44vh,460px)!important;min-height:0!important}
+  #root .landing .art svg{height:calc(100% - 70px)!important;max-height:none!important}
+  #root .landing>.capabilities{flex:0 0 auto!important;margin:0 0 clamp(8px,1.2vh,12px)!important;padding:clamp(10px,1.6vh,18px)!important}
+  #root .landing .caps{margin-top:clamp(8px,1.3vh,14px)!important}
+  #root .landing .caps article,#root .landing .caps article:first-child{padding:clamp(10px,1.6vh,18px)!important}
+  #root .landing .caps h3{margin:clamp(8px,1.3vh,14px) 0 5px!important}
+  #root .landing .caps p{line-height:1.45!important}
+  #root .landing>.footer{flex:0 0 auto!important;padding:clamp(6px,1vh,10px) 0!important}
+}
+@media (min-width:701px) and (max-height:720px){
+  #root .landing .hero h1{font-size:clamp(34px,5.5vh,42px)!important}
+  #root .landing .art{height:clamp(250px,36vh,300px)!important}
+  #root .landing .capabilities{padding:8px 12px!important}
+  #root .landing .caps article,#root .landing .caps article:first-child{padding:8px!important}
+}
+@media (max-width:700px){
+  #root .landing{height:auto!important;min-height:0!important;overflow:visible!important}
+}
+
+/* Refine landing page viewport fit */
+@media (min-width:701px){
+  #root .landing{height:calc(100svh - 64px)!important;min-height:0!important;display:flex!important;flex-direction:column!important;overflow:hidden!important;padding-bottom:6px!important}
+  #root .landing>.eyebrow{flex:0 0 auto!important;margin-top:clamp(6px,1vh,12px)!important}
+  #root .landing>.hero{flex:1 1 0!important;min-height:0!important;margin:8px 0 10px!important;padding:clamp(14px,1.8vh,22px)!important;gap:clamp(16px,2.5vw,34px)!important}
+  #root .landing .hero h1{font-size:clamp(38px,5.5vh,60px)!important;line-height:.96!important;margin:8px 0 12px!important}
+  #root .landing .copy{font-size:clamp(12px,1.6vh,15px)!important;line-height:1.45!important;margin:0 0 12px!important}
+  #root .landing .repoform{padding:10px!important}
+  #root .landing .inputrow button{min-height:40px!important}
+  #root .landing .art{height:auto!important;min-height:0!important;align-self:stretch!important;display:flex!important;flex-direction:column!important;padding:12px!important;overflow:visible!important}
+  #root .landing .art>.artlabel:first-child{flex:0 0 auto!important}
+  #root .landing .art .sketch-wrap{flex:1 1 auto!important;min-height:0!important;display:flex!important;flex-direction:column!important;justify-content:center!important}
+  #root .landing .art .module-sketch{width:100%!important;height:clamp(180px,27vh,285px)!important;max-height:none!important;min-height:0!important;flex:1 1 auto!important;margin:4px auto 0!important}
+  #root .landing .art .sketch-selection{flex:0 0 auto!important;margin:0 0 24px!important;padding:6px 9px!important}
+  #root .landing .artnote{right:10px!important;bottom:40px!important;padding:8px 10px!important}
+  #root .landing .artlabel.bottom{bottom:8px!important}
+  #root .landing>.capabilities{flex:0 0 auto!important;margin:0 0 8px!important;padding:10px 12px!important}
+  #root .landing .caps{gap:10px!important;margin-top:8px!important}
+  #root .landing .caps article,#root .landing .caps article:first-child{min-height:0!important;padding:10px 12px!important}
+  #root .landing .caps h3{font-size:clamp(16px,2.2vh,21px)!important;margin:8px 0 4px!important}
+  #root .landing .caps p{font-size:clamp(10px,1.35vh,12px)!important;line-height:1.4!important}
+  #root .landing>.footer{flex:0 0 auto!important;padding:6px 0!important}
+}
+@media (min-width:701px) and (max-height:720px){
+  #root .landing .hero h1{font-size:clamp(34px,5vh,42px)!important}
+  #root .landing .art .module-sketch{height:clamp(160px,23vh,210px)!important}
+  #root .landing .caps article,#root .landing .caps article:first-child{padding:7px 9px!important}
+}
+@media (max-width:700px){
+  #root .landing{height:auto!important;min-height:0!important;overflow:visible!important}
+}

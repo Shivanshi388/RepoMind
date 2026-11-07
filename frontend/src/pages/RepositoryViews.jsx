@@ -27,7 +27,7 @@ export function Sketch(){
 }
 
 export function Capability({n,icon,title,text}){return <article><div><small>{n}</small>{icon}</div><h3>{title}</h3><p>{text}</p></article>}
-export function Footer({workspace}){return <footer className="footer"><span>{workspace?'ANALYSIS / COMMIT PINNED':'REPOMIND / ENGINEERING ARCHIVE'}</span><span>{workspace?'STATIC ANALYSIS â€¢ SOURCE NOT EXECUTED':'BUILT TO MAKE CODEBASES LEGIBLE'} <i/></span></footer>}
+export function Footer({workspace}){return <footer className="footer"><span>{workspace?'ANALYSIS / COMMIT PINNED':'REPOMIND / ENGINEERING ARCHIVE'}</span><span>{workspace?'STATIC ANALYSIS • SOURCE NOT EXECUTED':'BUILT TO MAKE CODEBASES LEGIBLE'} <i/></span></footer>}
 function Stat({label,value,note}){return <div className="stat"><span>{label}</span><b>{value}</b><small>{note}</small></div>}
 export function Overview({repo,langs,files,ins,graph,open}) {
   const total = langs.reduce((sum, item) => sum + (Number(item[1]) || 0), 0);
