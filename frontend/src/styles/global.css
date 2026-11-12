@@ -2022,3 +2022,1326 @@ body{
 @media (max-width:700px){
   #root .landing{height:auto!important;min-height:0!important;overflow:visible!important}
 }
+
+
+/* RepoMind theme toggle */
+.theme-toggle{border:1px solid var(--line)!important;padding:8px 11px!important;background:transparent!important;color:inherit!important}
+.theme-toggle:hover{border-color:var(--red)!important;color:var(--red)!important}
+
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  background:#14110e;
+  color:#f3ead2;
+  --paper:#14110e;
+  --ink:#f3ead2;
+  --muted:#b8aa8d;
+  --line:#d5c8a7;
+  --red:#ed4fba;
+}
+:root[data-theme="dark"] body,
+:root[data-theme="dark"] #root,
+:root[data-theme="dark"] .app,
+:root[data-theme="dark"] .landing,
+:root[data-theme="dark"] .workspace{
+  background:#14110e!important;
+  background-image:none!important;
+  color:#f3ead2;
+}
+:root[data-theme="dark"] .topbar{
+  background:#14110e!important;
+  color:#f3ead2;
+  border-color:#82795f!important;
+}
+:root[data-theme="dark"] .topright small,
+:root[data-theme="dark"] .topright a,
+:root[data-theme="dark"] .topright button,
+:root[data-theme="dark"] .brand sup,
+:root[data-theme="dark"] .footer,
+:root[data-theme="dark"] .eyebrow,
+:root[data-theme="dark"] .folio,
+:root[data-theme="dark"] .artlabel{
+  color:#c8bb9b!important;
+}
+:root[data-theme="dark"] .hero{
+  background:#2d2714!important;
+  border-color:#eee2c2!important;
+  box-shadow:7px 8px 0 #050403!important;
+}
+:root[data-theme="dark"] .hero h1,
+:root[data-theme="dark"] .hero .copy{
+  color:#f3ead2!important;
+}
+:root[data-theme="dark"] .hero h1 em,
+:root[data-theme="dark"] .folio,
+:root[data-theme="dark"] .eyebrow>i,
+:root[data-theme="dark"] .footer i{
+  color:#f45bc1!important;
+}
+:root[data-theme="dark"] .repoform,
+:root[data-theme="dark"] .art,
+:root[data-theme="dark"] .capabilities{
+  background:#1c1811!important;
+  background-image:none!important;
+  color:#f3ead2!important;
+  border-color:#eee2c2!important;
+  box-shadow:5px 6px 0 #050403!important;
+}
+:root[data-theme="dark"] .repoform label,
+:root[data-theme="dark"] .formfoot,
+:root[data-theme="dark"] .artnote,
+:root[data-theme="dark"] .artnote strong,
+:root[data-theme="dark"] .artnote small{
+  color:#e2d5b6!important;
+}
+:root[data-theme="dark"] .inputrow input{
+  background:#100e0b!important;
+  color:#f3ead2!important;
+  border-color:#82795f!important;
+}
+:root[data-theme="dark"] .inputrow input::placeholder{
+  color:#a99c80!important;
+  opacity:1;
+}
+:root[data-theme="dark"] .inputrow button,
+:root[data-theme="dark"] .artnote{
+  background:#ed4fba!important;
+  color:#17110f!important;
+  border-color:#050403!important;
+}
+:root[data-theme="dark"] .art svg rect{
+  fill:#1c1811!important;
+  stroke:#e2d5b6!important;
+}
+:root[data-theme="dark"] .art svg rect[fill="#b51b83"],
+:root[data-theme="dark"] .art svg rect[fill="#ed4fba"]{
+  fill:#ed4fba!important;
+  stroke:#ed4fba!important;
+}
+:root[data-theme="dark"] .art svg text{
+  fill:#f3ead2!important;
+}
+:root[data-theme="dark"] .art svg line{
+  stroke:#a99560!important;
+}
+:root[data-theme="dark"] .caps article,
+:root[data-theme="dark"] .caps article:first-child{
+  border-color:#050403!important;
+  box-shadow:3px 4px 0 #050403!important;
+}
+:root[data-theme="dark"] .caps article:nth-child(1){
+  background:#503326!important;
+  color:#f4d9c9!important;
+}
+:root[data-theme="dark"] .caps article:nth-child(2){
+  background:#17483f!important;
+  color:#d1f0e6!important;
+}
+:root[data-theme="dark"] .caps article:nth-child(3){
+  background:#512540!important;
+  color:#f3d4e7!important;
+}
+:root[data-theme="dark"] .caps article>div,
+:root[data-theme="dark"] .caps h3,
+:root[data-theme="dark"] .caps p{
+  color:inherit!important;
+}
+
+/* Keep other pages on the same dark palette */
+:root[data-theme="dark"] .panel,
+:root[data-theme="dark"] .largegraph,
+:root[data-theme="dark"] .searchbox,
+:root[data-theme="dark"] .result,
+:root[data-theme="dark"] .compare,
+:root[data-theme="dark"] .compare-form,
+:root[data-theme="dark"] .ask-panel,
+:root[data-theme="dark"] .phase-tools,
+:root[data-theme="dark"] .review-summary,
+:root[data-theme="dark"] .risk-model,
+:root[data-theme="dark"] .overview-language,
+:root[data-theme="dark"] .overview-files,
+:root[data-theme="dark"] .filepage aside,
+:root[data-theme="dark"] .filepage>section,
+:root[data-theme="dark"] .filetree,
+:root[data-theme="dark"] .tree,
+:root[data-theme="dark"] .edges,
+:root[data-theme="dark"] .insight{
+  background:#1c1811!important;
+  background-image:none!important;
+  color:#f3ead2;
+  border-color:#655b43!important;
+}
+:root[data-theme="dark"] .code,
+:root[data-theme="dark"] .result code,
+:root[data-theme="dark"] .compare-result code,
+:root[data-theme="dark"] .searchbox input,
+:root[data-theme="dark"] .ask-controls input,
+:root[data-theme="dark"] .ask-controls select,
+:root[data-theme="dark"] .compare-form input{
+  background:#100e0b!important;
+  color:#f3ead2!important;
+  border-color:#655b43!important;
+}
+:root[data-theme="dark"] .copy,
+:root[data-theme="dark"] .repohead p,
+:root[data-theme="dark"] .caps p,
+:root[data-theme="dark"] .phase-tools p,
+:root[data-theme="dark"] .finding,
+:root[data-theme="dark"] .caveat{
+  color:#d2c6a9!important;
+}
+/* Dark palette matched to the supplied reference image */
+:root[data-theme="dark"] {
+  --paper: #14110e;
+  --ink: #f1e8d0;
+  --muted: #b8ad91;
+  --line: #82775c;
+  --red: #ed4fba;
+  color-scheme: dark;
+  background: #14110e !important;
+  color: #f1e8d0;
+}
+
+:root[data-theme="dark"] body,
+:root[data-theme="dark"] #root,
+:root[data-theme="dark"] #root .app,
+:root[data-theme="dark"] #root .landing {
+  background: #14110e !important;
+  background-image: none !important;
+  color: #f1e8d0 !important;
+}
+
+:root[data-theme="dark"] #root .topbar {
+  background: #14110e !important;
+  color: #f1e8d0 !important;
+  border-color: #82775c !important;
+}
+
+:root[data-theme="dark"] #root .topbar a,
+:root[data-theme="dark"] #root .topbar button,
+:root[data-theme="dark"] #root .topbar small,
+:root[data-theme="dark"] #root .brand sup,
+:root[data-theme="dark"] #root .eyebrow,
+:root[data-theme="dark"] #root .folio,
+:root[data-theme="dark"] #root .footer {
+  color: #c5b99a !important;
+}
+
+:root[data-theme="dark"] #root .landing .hero {
+  background: #2d2714 !important;
+  border-color: #eee4cc !important;
+  box-shadow: 7px 8px 0 #050403 !important;
+}
+
+:root[data-theme="dark"] #root .landing .hero h1,
+:root[data-theme="dark"] #root .landing .hero .copy {
+  color: #f1e8d0 !important;
+}
+
+:root[data-theme="dark"] #root .landing .hero h1 em,
+:root[data-theme="dark"] #root .landing .eyebrow > i,
+:root[data-theme="dark"] #root .landing .brand b span {
+  color: #f45bc1 !important;
+}
+
+:root[data-theme="dark"] #root .landing .repoform,
+:root[data-theme="dark"] #root .landing .art {
+  background: #1c1811 !important;
+  background-image: none !important;
+  color: #f1e8d0 !important;
+  border-color: #eee4cc !important;
+  box-shadow: 5px 6px 0 #050403 !important;
+}
+
+:root[data-theme="dark"] #root .landing .repoform label,
+:root[data-theme="dark"] #root .landing .formfoot,
+:root[data-theme="dark"] #root .landing .artlabel,
+:root[data-theme="dark"] #root .landing .artnote small {
+  color: #cfc3a4 !important;
+}
+
+:root[data-theme="dark"] #root .landing .inputrow input {
+  background: #100e0b !important;
+  color: #f1e8d0 !important;
+  border-color: #82775c !important;
+}
+
+:root[data-theme="dark"] #root .landing .inputrow input::placeholder {
+  color: #a99d80 !important;
+  opacity: 1;
+}
+
+:root[data-theme="dark"] #root .landing .inputrow button,
+:root[data-theme="dark"] #root .landing .artnote {
+  background: #ed4fba !important;
+  color: #17110f !important;
+  border-color: #050403 !important;
+}
+
+:root[data-theme="dark"] #root .landing .art svg rect {
+  fill: #1c1811 !important;
+  stroke: #ded1ad !important;
+}
+
+:root[data-theme="dark"] #root .landing .art svg rect[fill="#b51b83"],
+:root[data-theme="dark"] #root .landing .art svg rect[fill="#ed4fba"] {
+  fill: #ed4fba !important;
+  stroke: #ed4fba !important;
+}
+
+:root[data-theme="dark"] #root .landing .art svg text {
+  fill: #f1e8d0 !important;
+}
+
+:root[data-theme="dark"] #root .landing .art svg line {
+  stroke: #a99560 !important;
+}
+
+:root[data-theme="dark"] #root .landing .capabilities {
+  background: #1c1811 !important;
+  color: #c5b99a !important;
+  border-color: #eee4cc !important;
+  box-shadow: 6px 7px 0 #050403 !important;
+}
+
+:root[data-theme="dark"] #root .landing .caps article,
+:root[data-theme="dark"] #root .landing .caps article:first-child {
+  border-color: #050403 !important;
+  box-shadow: 3px 4px 0 #050403 !important;
+}
+
+:root[data-theme="dark"] #root .landing .caps article:nth-child(1) {
+  background: #503326 !important;
+  color: #f4d9c9 !important;
+}
+
+:root[data-theme="dark"] #root .landing .caps article:nth-child(2) {
+  background: #17483f !important;
+  color: #d1f0e6 !important;
+}
+
+:root[data-theme="dark"] #root .landing .caps article:nth-child(3) {
+  background: #512540 !important;
+  color: #f3d4e7 !important;
+}
+
+:root[data-theme="dark"] #root .landing .caps article > div,
+:root[data-theme="dark"] #root .landing .caps article h3,
+:root[data-theme="dark"] #root .landing .caps article p {
+  color: inherit !important;
+}
+
+:root[data-theme="dark"] #root .theme-toggle {
+  color: #ed78c8 !important;
+  border-color: #ed78c8 !important;
+}
+/* Dashboard colors matched to the dark mode reference */
+:root[data-theme="dark"] #root .account-dashboard {
+  background: #14110e !important;
+  color: #f1e8d0 !important;
+}
+
+:root[data-theme="dark"] #root .account-heading h1,
+:root[data-theme="dark"] #root .account-list-heading h2 {
+  color: #f1e8d0 !important;
+}
+
+:root[data-theme="dark"] #root .account-heading > small,
+:root[data-theme="dark"] #root .account-list-heading > div > small,
+:root[data-theme="dark"] #root .account-details > small {
+  color: #ed4fba !important;
+}
+
+:root[data-theme="dark"] #root .account-heading p,
+:root[data-theme="dark"] #root .account-details p,
+:root[data-theme="dark"] #root .account-list-heading > span,
+:root[data-theme="dark"] #root .account-repo small,
+:root[data-theme="dark"] #root .account-repo span,
+:root[data-theme="dark"] #root .account-repo p,
+:root[data-theme="dark"] #root .account-empty p {
+  color: #d2c6a9 !important;
+}
+
+:root[data-theme="dark"] #root .account-profile,
+:root[data-theme="dark"] #root .account-repo,
+:root[data-theme="dark"] #root .account-empty {
+  background: #1c1811 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+  box-shadow: 4px 5px 0 #050403 !important;
+}
+
+:root[data-theme="dark"] #root .account-details h2,
+:root[data-theme="dark"] #root .account-repo-title {
+  color: #ed4fba !important;
+}
+
+:root[data-theme="dark"] #root .account-profile > button {
+  background: transparent !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+}
+
+:root[data-theme="dark"] #root .account-profile > button:hover {
+  background: #ed4fba !important;
+  color: #17110f !important;
+  border-color: #ed4fba !important;
+}
+
+:root[data-theme="dark"] #root .account-repo > a {
+  color: #ed78c8 !important;
+}
+/* Repository overview dark palette matched to the reference */
+:root[data-theme="dark"] #root .workspace,
+:root[data-theme="dark"] #root .workspace .overview {
+  background: #14110e !important;
+  color: #f1e8d0 !important;
+}
+
+:root[data-theme="dark"] #root .workspace .repohead h1,
+:root[data-theme="dark"] #root .workspace .overview-intro h2,
+:root[data-theme="dark"] #root .workspace .overview-map-heading h3,
+:root[data-theme="dark"] #root .workspace .beginner-guide h3 {
+  color: #f1e8d0 !important;
+}
+
+:root[data-theme="dark"] #root .workspace .crumb,
+:root[data-theme="dark"] #root .workspace .meta,
+:root[data-theme="dark"] #root .workspace .repohead p,
+:root[data-theme="dark"] #root .workspace .overview-intro p,
+:root[data-theme="dark"] #root .workspace .overview-hint {
+  color: #cfc3a4 !important;
+}
+
+:root[data-theme="dark"] #root .workspace .overview-kicker,
+:root[data-theme="dark"] #root .workspace .beginner-guide > div small,
+:root[data-theme="dark"] #root .workspace .overview-map-heading small,
+:root[data-theme="dark"] #root .workspace .overview-language > small,
+:root[data-theme="dark"] #root .workspace .overview-files > small {
+  color: #ed65c2 !important;
+}
+
+/* Repository navigation tabs */
+:root[data-theme="dark"] #root .workspace .tabs {
+  background: #1c1811 !important;
+  border: 1px solid #ded1ad !important;
+}
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Start here"] { background: #bd3195 !important; }
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Files"] { background: #20786f !important; }
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Architecture"] { background: #b4861d !important; }
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Insights"] { background: #298957 !important; }
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Risks"] { background: #c45840 !important; }
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Search"] { background: #6855ad !important; }
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Compare"] { background: #b96116 !important; }
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Ask"] { background: #bd3195 !important; }
+:root[data-theme="dark"] #root .workspace .tabs button {
+  color: #fff3dc !important;
+  border-color: #14110e !important;
+}
+:root[data-theme="dark"] #root .workspace .tabs button.active {
+  color: #fff8e8 !important;
+  border-bottom-color: #f2c55c !important;
+}
+
+/* Repository facts */
+:root[data-theme="dark"] #root .workspace .overview-facts button {
+  background: #1c1811 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+  box-shadow: 3px 4px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-facts b {
+  color: #f1e8d0 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-facts span {
+  color: #cfc3a4 !important;
+}
+
+/* Beginner steps */
+:root[data-theme="dark"] #root .workspace .beginner-guide {
+  background: #2d2714 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+  box-shadow: 5px 7px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .workspace .beginner-guide article {
+  border-color: #050403 !important;
+  box-shadow: 3px 4px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(1) {
+  background: #503326 !important;
+  color: #f4d9c9 !important;
+}
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(2) {
+  background: #17483f !important;
+  color: #d1f0e6 !important;
+}
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(3) {
+  background: #512540 !important;
+  color: #f3d4e7 !important;
+}
+:root[data-theme="dark"] #root .workspace .beginner-guide article strong,
+:root[data-theme="dark"] #root .workspace .beginner-guide article small {
+  color: inherit !important;
+}
+:root[data-theme="dark"] #root .workspace .beginner-guide article > b {
+  background: #1c1811 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+}
+
+/* Dependency map and colored file nodes */
+:root[data-theme="dark"] #root .workspace .overview-map {
+  background: #1c1811 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+  box-shadow: 5px 7px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map .architecture-map-wrap {
+  background: #2d2714 !important;
+  background-image: none !important;
+  border-color: #ded1ad !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map .map-node rect {
+  fill: #4c3d0e !important;
+  stroke: #080705 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:nth-of-type(5n+1) rect,
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:nth-of-type(5n+2) rect {
+  fill: #20564c !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:nth-of-type(5n+3) rect {
+  fill: #512540 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:nth-of-type(5n+4) rect {
+  fill: #39345f !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map .map-node text {
+  fill: #f1e8d0 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:hover rect,
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:focus rect,
+:root[data-theme="dark"] #root .workspace .overview-map .map-node.is-active rect {
+  fill: #ed4fba !important;
+  stroke: #080705 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map .map-edges line {
+  stroke: #a99560 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map .map-edges line.edge-related {
+  stroke: #ed4fba !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map .map-selection {
+  background: #40350f !important;
+  color: #f1e8d0 !important;
+  border-color: #ed4fba !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map .map-selection b {
+  color: #f1e8d0 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map-heading button {
+  background: #ed4fba !important;
+  color: #17110f !important;
+  border-color: #080705 !important;
+  box-shadow: 3px 4px 0 #050403 !important;
+}
+
+/* Language and highlighted-file panels */
+:root[data-theme="dark"] #root .workspace .overview-lower .overview-language,
+:root[data-theme="dark"] #root .workspace .overview-lower .overview-files {
+  background: #1c1811 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+  box-shadow: 5px 7px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-language p,
+:root[data-theme="dark"] #root .workspace .overview-files > p {
+  color: #cfc3a4 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-files button {
+  background: #4c3d0e !important;
+  color: #f1e8d0 !important;
+  border-color: #080705 !important;
+  box-shadow: 3px 4px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-files button:nth-of-type(4n+2) {
+  background: #20564c !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-files button:nth-of-type(4n+3) {
+  background: #503326 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-files button:nth-of-type(4n+4) {
+  background: #39345f !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-files button span,
+:root[data-theme="dark"] #root .workspace .overview-files button em,
+:root[data-theme="dark"] #root .workspace .overview-files button b {
+  color: #f1e8d0 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-language .langbar {
+  background: #30291c !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-language .langbar .c0 { background: #e8c849 !important; }
+:root[data-theme="dark"] #root .workspace .overview-language .langbar .c1 { background: #f276c6 !important; }
+:root[data-theme="dark"] #root .workspace .overview-language .langbar .c2 { background: #a99af2 !important; }
+:root[data-theme="dark"] #root .workspace .overview-language .langbar .c3 { background: #55c9aa !important; }
+:root[data-theme="dark"] #root .workspace .overview-language .langbar .c4 { background: #f3a14b !important; }
+:root[data-theme="dark"] #root .workspace .overview-language .dot {
+  background: #e8c849 !important;
+}
+/* Repository dark palette corrections: readable step text and column colors */
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(1),
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(1) span,
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(1) strong,
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(1) small {
+  color: #f4d9c9 !important;
+}
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(2),
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(2) span,
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(2) strong,
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(2) small {
+  color: #d1f0e6 !important;
+}
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(3),
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(3) span,
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(3) strong,
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(3) small {
+  color: #f3d4e7 !important;
+}
+
+/* The edge group is the first SVG group, so node indices start at 2 */
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:nth-of-type(5n+2) rect { fill: #20564c !important; }
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:nth-of-type(5n+3) rect { fill: #512540 !important; }
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:nth-of-type(5n+4) rect { fill: #4c3d0e !important; }
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:nth-of-type(5n+5) rect { fill: #39345f !important; }
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:nth-of-type(5n+1) rect { fill: #4c3d0e !important; }
+:root[data-theme="dark"] #root .workspace .overview-map .map-node text { fill: #f1e8d0 !important; }
+
+/* Keep the interactive selected node pink */
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:hover rect,
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:focus rect,
+:root[data-theme="dark"] #root .workspace .overview-map .map-node.is-active rect {
+  fill: #ed4fba !important;
+}
+/* Final repository dark palette color corrections */
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:hover rect,
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:focus rect,
+:root[data-theme="dark"] #root .workspace .overview-map .map-node.is-active rect {
+  fill: #8b5100 !important;
+  stroke: #080705 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:hover text,
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:focus text,
+:root[data-theme="dark"] #root .workspace .overview-map .map-node.is-active text {
+  fill: #fff0ca !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-language .languages > div:not(.langbar),
+:root[data-theme="dark"] #root .workspace .overview-language .languages > div:not(.langbar) span,
+:root[data-theme="dark"] #root .workspace .overview-language .languages > div:not(.langbar) b {
+  color: #e9dfc9 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-language .languages .dot {
+  color: inherit !important;
+}
+/* Make the analyzed status readable in dark mode */
+:root[data-theme="dark"] #root .workspace .repohead h1 small {
+  color: #78dfb5 !important;
+  border-color: #58bd94 !important;
+  background: #173329 !important;
+}
+/* Give the highlighted-file list more breathing room in both themes */
+#root .workspace .overview-files {
+  padding: 22px 24px !important;
+}
+#root .workspace .overview-files > small {
+  display: block;
+  margin-bottom: 12px !important;
+}
+#root .workspace .overview-files > button {
+  box-sizing: border-box !important;
+  min-height: 58px;
+  padding: 12px 14px !important;
+  grid-template-columns: 34px minmax(0, 1fr) auto 18px !important;
+  gap: 14px !important;
+  border-radius: 12px !important;
+}
+#root .workspace .overview-files > button + button {
+  margin-top: 9px !important;
+}
+#root .workspace .overview-files > button b {
+  min-width: 0;
+}
+/* Warm light-colored box shadows in dark mode */
+:root[data-theme="dark"] #root .hero,
+:root[data-theme="dark"] #root .capabilities,
+:root[data-theme="dark"] #root .caps article,
+:root[data-theme="dark"] #root .overview-facts button,
+:root[data-theme="dark"] #root .beginner-guide,
+:root[data-theme="dark"] #root .beginner-guide article,
+:root[data-theme="dark"] #root .overview-map,
+:root[data-theme="dark"] #root .overview-map-heading button,
+:root[data-theme="dark"] #root .overview-language,
+:root[data-theme="dark"] #root .overview-files,
+:root[data-theme="dark"] #root .overview-files button,
+:root[data-theme="dark"] #root .account-profile,
+:root[data-theme="dark"] #root .account-repo,
+:root[data-theme="dark"] #root .account-empty {
+  box-shadow: 4px 5px 0 #d8cdaF !important;
+}
+/* Change only the offset drop-shadow color in dark mode */
+:root[data-theme="dark"] #root .landing .hero,
+:root[data-theme="dark"] #root .landing .repoform,
+:root[data-theme="dark"] #root .landing .art,
+:root[data-theme="dark"] #root .landing .artnote,
+:root[data-theme="dark"] #root .landing .capabilities,
+:root[data-theme="dark"] #root .landing .caps article,
+:root[data-theme="dark"] #root .workspace .overview-facts button,
+:root[data-theme="dark"] #root .workspace .beginner-guide,
+:root[data-theme="dark"] #root .workspace .beginner-guide article,
+:root[data-theme="dark"] #root .workspace .overview-map,
+:root[data-theme="dark"] #root .workspace .overview-map-heading button,
+:root[data-theme="dark"] #root .workspace .overview-lower .overview-language,
+:root[data-theme="dark"] #root .workspace .overview-lower .overview-files,
+:root[data-theme="dark"] #root .workspace .overview-files > button,
+:root[data-theme="dark"] #root .account-dashboard .account-profile,
+:root[data-theme="dark"] #root .account-dashboard .account-repo,
+:root[data-theme="dark"] #root .account-dashboard .account-empty {
+  box-shadow: 4px 5px 0 #d8cdaf !important;
+}
+/* Make the three beginner-step number badges circular in both themes */
+#root .workspace .beginner-guide article > b {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  aspect-ratio: 1 / 1 !important;
+  box-sizing: border-box !important;
+  display: inline-grid !important;
+  place-items: center !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  flex: 0 0 36px !important;
+  line-height: 1 !important;
+}
+/* Keep the top navigation visible while scrolling */
+#root .topbar {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+}
+/* Keep map selection helper text readable in dark mode */
+:root[data-theme="dark"] #root .workspace .overview-map .map-selection,
+:root[data-theme="dark"] #root .workspace .overview-map .map-selection span,
+:root[data-theme="dark"] #root .workspace .overview-map .map-selection b {
+  color: #f1e8d0 !important;
+}
+/* Unified dark palette matched to the supplied RepoMind reference PDF */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --paper: #14110e;
+  --ink: #f1e8d0;
+  --muted: #c4b796;
+  --line: #786d53;
+  --red: #ed4fba;
+  background: #14110e !important;
+  color: #f1e8d0 !important;
+}
+
+:root[data-theme="dark"] html,
+:root[data-theme="dark"] body,
+:root[data-theme="dark"] #root,
+:root[data-theme="dark"] #root .app,
+:root[data-theme="dark"] #root .landing,
+:root[data-theme="dark"] #root .workspace {
+  background: #14110e !important;
+  background-image: none !important;
+  color: #f1e8d0 !important;
+}
+
+:root[data-theme="dark"] #root .topbar {
+  background: #14110e !important;
+  color: #f1e8d0 !important;
+  border-color: #786d53 !important;
+}
+
+:root[data-theme="dark"] #root .topbar a,
+:root[data-theme="dark"] #root .topbar button,
+:root[data-theme="dark"] #root .topbar small,
+:root[data-theme="dark"] #root .brand sup,
+:root[data-theme="dark"] #root .footer,
+:root[data-theme="dark"] #root .crumb,
+:root[data-theme="dark"] #root .meta {
+  color: #c4b796 !important;
+}
+
+:root[data-theme="dark"] #root .brand,
+:root[data-theme="dark"] #root .repohead h1,
+:root[data-theme="dark"] #root .reporthead h2,
+:root[data-theme="dark"] #root .account-heading h1,
+:root[data-theme="dark"] #root .account-list-heading h2,
+:root[data-theme="dark"] #root .overview-intro h2,
+:root[data-theme="dark"] #root .overview-map-heading h3,
+:root[data-theme="dark"] #root .beginner-guide h3 {
+  color: #f1e8d0 !important;
+}
+
+:root[data-theme="dark"] #root .brand b span,
+:root[data-theme="dark"] #root .eyebrow,
+:root[data-theme="dark"] #root .folio,
+:root[data-theme="dark"] #root .overview-kicker,
+:root[data-theme="dark"] #root .reporthead > small,
+:root[data-theme="dark"] #root .account-heading > small,
+:root[data-theme="dark"] #root .account-details > small,
+:root[data-theme="dark"] #root .account-list-heading > div > small,
+:root[data-theme="dark"] #root .beginner-guide > div > small,
+:root[data-theme="dark"] #root .overview-map-heading small,
+:root[data-theme="dark"] #root .overview-language > small,
+:root[data-theme="dark"] #root .overview-files > small,
+:root[data-theme="dark"] #root .searchcount {
+  color: #ed68c1 !important;
+}
+
+:root[data-theme="dark"] #root .copy,
+:root[data-theme="dark"] #root .repohead p,
+:root[data-theme="dark"] #root .reporthead p,
+:root[data-theme="dark"] #root .overview-intro p,
+:root[data-theme="dark"] #root .overview-hint,
+:root[data-theme="dark"] #root .account-heading p,
+:root[data-theme="dark"] #root .account-details p,
+:root[data-theme="dark"] #root .account-list-heading > span,
+:root[data-theme="dark"] #root .account-repo p,
+:root[data-theme="dark"] #root .account-empty p,
+:root[data-theme="dark"] #root .finding,
+:root[data-theme="dark"] #root .caveat {
+  color: #d2c6a9 !important;
+}
+
+/* Landing page */
+:root[data-theme="dark"] #root .landing .hero {
+  background: #2d2714 !important;
+  border-color: #eee4cc !important;
+  box-shadow: 7px 8px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .landing .repoform,
+:root[data-theme="dark"] #root .landing .art,
+:root[data-theme="dark"] #root .landing .capabilities {
+  background: #1c1811 !important;
+  background-image: none !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+  box-shadow: 5px 6px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .landing .hero h1,
+:root[data-theme="dark"] #root .landing .hero .copy,
+:root[data-theme="dark"] #root .landing .repoform label,
+:root[data-theme="dark"] #root .landing .formfoot,
+:root[data-theme="dark"] #root .landing .artlabel {
+  color: #e6dac0 !important;
+}
+:root[data-theme="dark"] #root .landing .hero h1 em {
+  color: #f45bc1 !important;
+}
+:root[data-theme="dark"] #root .landing .inputrow input {
+  background: #100e0b !important;
+  color: #f1e8d0 !important;
+  border-color: #786d53 !important;
+}
+:root[data-theme="dark"] #root .landing .inputrow input::placeholder {
+  color: #a99d80 !important;
+  opacity: 1;
+}
+:root[data-theme="dark"] #root .landing .inputrow button,
+:root[data-theme="dark"] #root .landing .artnote {
+  background: #ed4fba !important;
+  color: #17110f !important;
+  border-color: #050403 !important;
+}
+:root[data-theme="dark"] #root .landing .art svg rect {
+  fill: #1c1811 !important;
+  stroke: #ded1ad !important;
+}
+:root[data-theme="dark"] #root .landing .art svg rect[fill="#b51b83"],
+:root[data-theme="dark"] #root .landing .art svg rect[fill="#ed4fba"] {
+  fill: #ed4fba !important;
+  stroke: #ed4fba !important;
+}
+:root[data-theme="dark"] #root .landing .art svg text {
+  fill: #f1e8d0 !important;
+}
+:root[data-theme="dark"] #root .landing .art svg line {
+  stroke: #a99560 !important;
+}
+:root[data-theme="dark"] #root .landing .caps article:nth-child(1) {
+  background: #503326 !important;
+  color: #f4d9c9 !important;
+}
+:root[data-theme="dark"] #root .landing .caps article:nth-child(2) {
+  background: #17483f !important;
+  color: #d1f0e6 !important;
+}
+:root[data-theme="dark"] #root .landing .caps article:nth-child(3) {
+  background: #512540 !important;
+  color: #f3d4e7 !important;
+}
+:root[data-theme="dark"] #root .landing .caps article > div,
+:root[data-theme="dark"] #root .landing .caps article h3,
+:root[data-theme="dark"] #root .landing .caps article p {
+  color: inherit !important;
+}
+
+/* Repository navigation */
+:root[data-theme="dark"] #root .workspace .tabs {
+  background: #1c1811 !important;
+  border-color: #786d53 !important;
+}
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Overview"] { background: #bd3195 !important; }
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Files"] { background: #20786f !important; }
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Architecture"] { background: #b4861d !important; }
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Insights"] { background: #298957 !important; }
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Risks"] { background: #c45840 !important; }
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Search"] { background: #6855ad !important; }
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Compare"] { background: #b96116 !important; }
+:root[data-theme="dark"] #root .workspace .tabs button[data-tab="Ask"] { background: #bd3195 !important; }
+:root[data-theme="dark"] #root .workspace .tabs button {
+  color: #fff3dc !important;
+  border-color: #14110e !important;
+}
+:root[data-theme="dark"] #root .workspace .tabs button.active {
+  color: #fff8e8 !important;
+  border-bottom-color: #f2c55c !important;
+}
+
+/* Overview steps, facts, map, language and file panels */
+:root[data-theme="dark"] #root .workspace .overview-facts button {
+  background: #1c1811 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+  box-shadow: 3px 4px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-facts b { color: #f1e8d0 !important; }
+:root[data-theme="dark"] #root .workspace .overview-facts span { color: #cfc3a4 !important; }
+
+:root[data-theme="dark"] #root .workspace .beginner-guide {
+  background: #2d2714 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+  box-shadow: 5px 7px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .workspace .beginner-guide article {
+  border-color: #050403 !important;
+  box-shadow: 3px 4px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(1) { background: #503326 !important; color: #f4d9c9 !important; }
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(2) { background: #17483f !important; color: #d1f0e6 !important; }
+:root[data-theme="dark"] #root .workspace .beginner-guide article:nth-of-type(3) { background: #512540 !important; color: #f3d4e7 !important; }
+:root[data-theme="dark"] #root .workspace .beginner-guide article span,
+:root[data-theme="dark"] #root .workspace .beginner-guide article strong,
+:root[data-theme="dark"] #root .workspace .beginner-guide article small { color: inherit !important; }
+:root[data-theme="dark"] #root .workspace .beginner-guide article > b {
+  background: #1c1811 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+}
+
+:root[data-theme="dark"] #root .workspace .overview-map,
+:root[data-theme="dark"] #root .workspace .overview-lower .overview-language,
+:root[data-theme="dark"] #root .workspace .overview-lower .overview-files {
+  background: #1c1811 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+  box-shadow: 5px 7px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map .architecture-map-wrap {
+  background: #2d2714 !important;
+  background-image: none !important;
+  border-color: #ded1ad !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map .map-node rect { fill: #4c3d0e !important; stroke: #080705 !important; }
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:nth-of-type(5n+2) rect { fill: #20564c !important; }
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:nth-of-type(5n+3) rect { fill: #512540 !important; }
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:nth-of-type(5n+4) rect { fill: #4c3d0e !important; }
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:nth-of-type(5n+5) rect { fill: #39345f !important; }
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:nth-of-type(5n+1) rect { fill: #4c3d0e !important; }
+:root[data-theme="dark"] #root .workspace .overview-map .map-node text { fill: #f1e8d0 !important; }
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:hover rect,
+:root[data-theme="dark"] #root .workspace .overview-map .map-node:focus rect,
+:root[data-theme="dark"] #root .workspace .overview-map .map-node.is-active rect { fill: #8b5100 !important; }
+:root[data-theme="dark"] #root .workspace .overview-map .map-edges line { stroke: #a99560 !important; }
+:root[data-theme="dark"] #root .workspace .overview-map .map-edges line.edge-related { stroke: #ed4fba !important; }
+:root[data-theme="dark"] #root .workspace .overview-map .map-selection {
+  background: #40350f !important;
+  color: #f1e8d0 !important;
+  border-color: #786d53 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-map .map-selection span,
+:root[data-theme="dark"] #root .workspace .overview-map .map-selection b { color: #f1e8d0 !important; }
+:root[data-theme="dark"] #root .workspace .overview-map-heading button {
+  background: #ed4fba !important;
+  color: #17110f !important;
+  border-color: #050403 !important;
+  box-shadow: 3px 4px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-language p,
+:root[data-theme="dark"] #root .workspace .overview-files > p { color: #d2c6a9 !important; }
+:root[data-theme="dark"] #root .workspace .overview-language .languages > div:not(.langbar),
+:root[data-theme="dark"] #root .workspace .overview-language .languages > div:not(.langbar) span,
+:root[data-theme="dark"] #root .workspace .overview-language .languages > div:not(.langbar) b { color: #e9dfc9 !important; }
+:root[data-theme="dark"] #root .workspace .overview-files > button {
+  background: #4c3d0e !important;
+  color: #f1e8d0 !important;
+  border-color: #050403 !important;
+  box-shadow: 3px 4px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .workspace .overview-files > button:nth-of-type(4n+2) { background: #20564c !important; }
+:root[data-theme="dark"] #root .workspace .overview-files > button:nth-of-type(4n+3) { background: #503326 !important; }
+:root[data-theme="dark"] #root .workspace .overview-files > button:nth-of-type(4n+4) { background: #39345f !important; }
+:root[data-theme="dark"] #root .workspace .overview-files > button b,
+:root[data-theme="dark"] #root .workspace .overview-files > button span,
+:root[data-theme="dark"] #root .workspace .overview-files > button em { color: #f1e8d0 !important; }
+
+/* Files page and code inspection */
+:root[data-theme="dark"] #root .workspace .filepage aside,
+:root[data-theme="dark"] #root .workspace .filepage > section,
+:root[data-theme="dark"] #root .workspace .codepanel,
+:root[data-theme="dark"] #root .workspace .tree,
+:root[data-theme="dark"] #root .workspace .filedesc,
+:root[data-theme="dark"] #root .workspace .phase-tools {
+  background: #1c1811 !important;
+  color: #f1e8d0 !important;
+  border-color: #786d53 !important;
+}
+:root[data-theme="dark"] #root .workspace .filter,
+:root[data-theme="dark"] #root .workspace .filter input {
+  background: #100e0b !important;
+  color: #f1e8d0 !important;
+  border-color: #786d53 !important;
+}
+:root[data-theme="dark"] #root .workspace .tree details summary,
+:root[data-theme="dark"] #root .workspace .treefile,
+:root[data-theme="dark"] #root .workspace .codehead,
+:root[data-theme="dark"] #root .workspace .codehead b,
+:root[data-theme="dark"] #root .workspace .filedesc p { color: #d2c6a9 !important; }
+:root[data-theme="dark"] #root .workspace .treefile.chosen,
+:root[data-theme="dark"] #root .workspace .treefile:hover { background: #4c3d0e !important; color: #f1e8d0 !important; }
+:root[data-theme="dark"] #root .workspace .code {
+  background: #0b0907 !important;
+  color: #e4d9c1 !important;
+}
+:root[data-theme="dark"] #root .workspace .phase-tools > section:nth-child(1) { background: #392f16 !important; color: #f1e8d0 !important; }
+:root[data-theme="dark"] #root .workspace .phase-tools > section:nth-child(2) { background: #20564c !important; color: #d1f0e6 !important; }
+:root[data-theme="dark"] #root .workspace .phase-tools > section:nth-child(3) { background: #503326 !important; color: #f4d9c9 !important; }
+:root[data-theme="dark"] #root .workspace .phase-tools > section:nth-child(4) { background: #512540 !important; color: #f3d4e7 !important; }
+
+/* Architecture, edges, insight and risk pages */
+:root[data-theme="dark"] #root .workspace .largegraph,
+:root[data-theme="dark"] #root .workspace .edges,
+:root[data-theme="dark"] #root .workspace .insight,
+:root[data-theme="dark"] #root .workspace .risk-model,
+:root[data-theme="dark"] #root .workspace .risks {
+  background: #1c1811 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+  box-shadow: 5px 6px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .workspace .largegraph .architecture-map-wrap { background: #2d2714 !important; border-color: #ded1ad !important; }
+:root[data-theme="dark"] #root .workspace .edges > div,
+:root[data-theme="dark"] #root .workspace .insight button { border-color: #786d53 !important; color: #d2c6a9 !important; }
+:root[data-theme="dark"] #root .workspace .edges > div:nth-of-type(4n+1),
+:root[data-theme="dark"] #root .workspace .risks > button:nth-of-type(4n+1) { background: #4c3d0e !important; color: #f1e8d0 !important; }
+:root[data-theme="dark"] #root .workspace .edges > div:nth-of-type(4n+2),
+:root[data-theme="dark"] #root .workspace .risks > button:nth-of-type(4n+2) { background: #20564c !important; color: #d1f0e6 !important; }
+:root[data-theme="dark"] #root .workspace .edges > div:nth-of-type(4n+3),
+:root[data-theme="dark"] #root .workspace .risks > button:nth-of-type(4n+3) { background: #503326 !important; color: #f4d9c9 !important; }
+:root[data-theme="dark"] #root .workspace .edges > div:nth-of-type(4n+4),
+:root[data-theme="dark"] #root .workspace .risks > button:nth-of-type(4n+4) { background: #39345f !important; color: #ded8fa !important; }
+:root[data-theme="dark"] #root .workspace .edges button,
+:root[data-theme="dark"] #root .workspace .risks button b,
+:root[data-theme="dark"] #root .workspace .risks button small { color: inherit !important; }
+:root[data-theme="dark"] #root .workspace .insight a,
+:root[data-theme="dark"] #root .workspace .insight button { color: #78b6ff !important; }
+
+/* Search and comparison */
+:root[data-theme="dark"] #root .workspace .searchbox,
+:root[data-theme="dark"] #root .workspace .compare-form,
+:root[data-theme="dark"] #root .workspace .compare-result,
+:root[data-theme="dark"] #root .workspace .result {
+  background: #1c1811 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+}
+:root[data-theme="dark"] #root .workspace .searchbox input,
+:root[data-theme="dark"] #root .workspace .compare-form input {
+  background: #100e0b !important;
+  color: #f1e8d0 !important;
+  border-color: #786d53 !important;
+}
+:root[data-theme="dark"] #root .workspace .searchbox input::placeholder,
+:root[data-theme="dark"] #root .workspace .compare-form input::placeholder { color: #a99d80 !important; opacity: 1; }
+:root[data-theme="dark"] #root .workspace .result code,
+:root[data-theme="dark"] #root .workspace .compare-result code {
+  background: #0b0907 !important;
+  color: #e4d9c1 !important;
+}
+:root[data-theme="dark"] #root .workspace .compare-form button { background: #293b60 !important; color: #f1e8d0 !important; }
+
+/* Repository questions */
+:root[data-theme="dark"] #root .workspace .ask-panel {
+  background: #1c1811 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+  box-shadow: 5px 6px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .workspace .ask-question-grid > button:nth-child(4n+1),
+:root[data-theme="dark"] #root .workspace .ask-question-grid > button:nth-child(4n+3) {
+  background: #503326 !important;
+  color: #f4d9c9 !important;
+}
+:root[data-theme="dark"] #root .workspace .ask-question-grid > button:nth-child(4n+2) {
+  background: #17483f !important;
+  color: #d1f0e6 !important;
+}
+:root[data-theme="dark"] #root .workspace .ask-question-grid > button:nth-child(4n+4) {
+  background: #512540 !important;
+  color: #f3d4e7 !important;
+}
+:root[data-theme="dark"] #root .workspace .ask-panel input,
+:root[data-theme="dark"] #root .workspace .ask-panel select {
+  background: #100e0b !important;
+  color: #f1e8d0 !important;
+  border-color: #786d53 !important;
+}
+
+/* User dashboard */
+:root[data-theme="dark"] #root .account-dashboard {
+  background: #14110e !important;
+  color: #f1e8d0 !important;
+}
+:root[data-theme="dark"] #root .account-profile,
+:root[data-theme="dark"] #root .account-repo,
+:root[data-theme="dark"] #root .account-empty {
+  background: #1c1811 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+  box-shadow: 5px 6px 0 #050403 !important;
+}
+:root[data-theme="dark"] #root .account-details h2,
+:root[data-theme="dark"] #root .account-repo-title { color: #ed68c1 !important; }
+:root[data-theme="dark"] #root .account-repo > a { color: #ed78c8 !important; }
+:root[data-theme="dark"] #root .account-profile > button {
+  background: transparent !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+}
+:root[data-theme="dark"] #root .theme-toggle {
+  color: #ed68c1 !important;
+  border-color: #ed68c1 !important;
+}
+/* Dark reference colors for nested panels and result rows */
+:root[data-theme="dark"] #root .workspace .reporthead,
+:root[data-theme="dark"] #root .workspace .paneltitle,
+:root[data-theme="dark"] #root .workspace .filedesc,
+:root[data-theme="dark"] #root .workspace .codehead,
+:root[data-theme="dark"] #root .workspace .phase-tools,
+:root[data-theme="dark"] #root .workspace .review-summary,
+:root[data-theme="dark"] #root .workspace .risk-model,
+:root[data-theme="dark"] #root .workspace .compare-form,
+:root[data-theme="dark"] #root .workspace .compare-result,
+:root[data-theme="dark"] #root .workspace .ask-beginner {
+  background: #1c1811 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+}
+
+:root[data-theme="dark"] #root .workspace .filedesc > small,
+:root[data-theme="dark"] #root .workspace .phase-tools section > b,
+:root[data-theme="dark"] #root .workspace .ask-section-heading > b,
+:root[data-theme="dark"] #root .workspace .reporthead > small {
+  color: #ed68c1 !important;
+}
+
+:root[data-theme="dark"] #root .workspace .filedesc p,
+:root[data-theme="dark"] #root .workspace .phase-tools section p,
+:root[data-theme="dark"] #root .workspace .phase-tools section > small,
+:root[data-theme="dark"] #root .workspace .ask-section-heading > span,
+:root[data-theme="dark"] #root .workspace .risk-model span,
+:root[data-theme="dark"] #root .workspace .risk-model small {
+  color: #d2c6a9 !important;
+}
+
+:root[data-theme="dark"] #root .workspace .phase-tools section:nth-child(1) {
+  background: #392f16 !important;
+  color: #f1e8d0 !important;
+}
+:root[data-theme="dark"] #root .workspace .phase-tools section:nth-child(2) {
+  background: #20564c !important;
+  color: #d1f0e6 !important;
+}
+:root[data-theme="dark"] #root .workspace .phase-tools section:nth-child(3) {
+  background: #503326 !important;
+  color: #f4d9c9 !important;
+}
+:root[data-theme="dark"] #root .workspace .phase-tools section:nth-child(4) {
+  background: #512540 !important;
+  color: #f3d4e7 !important;
+}
+:root[data-theme="dark"] #root .workspace .phase-tools section button,
+:root[data-theme="dark"] #root .workspace .phase-tools section button small {
+  color: inherit !important;
+}
+
+:root[data-theme="dark"] #root .workspace .insgrid .insight,
+:root[data-theme="dark"] #root .workspace .insgrid .insight:nth-child(3n+2),
+:root[data-theme="dark"] #root .workspace .insgrid .insight:nth-child(3n+3) {
+  background: #1c1811 !important;
+  color: #f1e8d0 !important;
+  border-color: #ded1ad !important;
+}
+:root[data-theme="dark"] #root .workspace .insight button span {
+  color: #78b6ff !important;
+}
+:root[data-theme="dark"] #root .workspace .insight button b {
+  color: #f1e8d0 !important;
+}
+
+:root[data-theme="dark"] #root .workspace .compare-form input,
+:root[data-theme="dark"] #root .workspace .searchbox input,
+:root[data-theme="dark"] #root .workspace .ask-panel input,
+:root[data-theme="dark"] #root .workspace .ask-panel select {
+  background: #100e0b !important;
+  color: #f1e8d0 !important;
+  border-color: #786d53 !important;
+}
+:root[data-theme="dark"] #root .workspace .compare-result article {
+  background: #392f16 !important;
+  color: #f1e8d0 !important;
+  border-color: #786d53 !important;
+}
+:root[data-theme="dark"] #root .workspace .compare-result article b,
+:root[data-theme="dark"] #root .workspace .compare-result article small,
+:root[data-theme="dark"] #root .workspace .compare-result article span {
+  color: #e6dac0 !important;
+}
+
+:root[data-theme="dark"] #root .workspace .ask-question-grid > button span,
+:root[data-theme="dark"] #root .workspace .ask-question-grid > button strong,
+:root[data-theme="dark"] #root .workspace .ask-question-grid > button small {
+  color: inherit !important;
+}
+:root[data-theme="dark"] #root .workspace .ask-question-grid > button:nth-child(4n+1),
+:root[data-theme="dark"] #root .workspace .ask-question-grid > button:nth-child(4n+3) {
+  background: #503326 !important;
+  color: #f4d9c9 !important;
+}
+:root[data-theme="dark"] #root .workspace .ask-question-grid > button:nth-child(4n+2) {
+  background: #17483f !important;
+  color: #d1f0e6 !important;
+}
+:root[data-theme="dark"] #root .workspace .ask-question-grid > button:nth-child(4n+4) {
+  background: #512540 !important;
+  color: #f3d4e7 !important;
+}
+/* Dark mode: fix low-contrast text, footer, numbers and offset shadows */
+:root[data-theme="dark"] #root .workspace .reporthead {
+  background: transparent !important;
+  color: #f1e8d0 !important;
+}
+:root[data-theme="dark"] #root .workspace .reporthead h2,
+:root[data-theme="dark"] #root .workspace .ask-intro h2,
+:root[data-theme="dark"] #root .workspace .ask-intro p,
+:root[data-theme="dark"] #root .workspace .compare-form > b {
+  color: #f1e8d0 !important;
+}
+:root[data-theme="dark"] #root .workspace .ask-intro > small,
+:root[data-theme="dark"] #root .workspace .ask-section-heading > b {
+  color: #ed68c1 !important;
+}
+:root[data-theme="dark"] #root .workspace .ask-intro p,
+:root[data-theme="dark"] #root .workspace .ask-section-heading > span,
+:root[data-theme="dark"] #root .workspace .semantic-toggle {
+  color: #d2c6a9 !important;
+}
+
+/* Keep every footer label readable */
+:root[data-theme="dark"] #root .workspace .footer,
+:root[data-theme="dark"] #root .workspace .footer * {
+  color: #c4b796 !important;
+}
+:root[data-theme="dark"] #root .workspace .footer {
+  border-color: #786d53 !important;
+}
+:root[data-theme="dark"] #root .workspace .footer i {
+  background: #55c9aa !important;
+}
+
+/* Risk-row numbers and review signals */
+:root[data-theme="dark"] #root .workspace .risks > button > span,
+:root[data-theme="dark"] #root .workspace .risks > button > b,
+:root[data-theme="dark"] #root .workspace .risks > button > b small,
+:root[data-theme="dark"] #root .workspace .risks > button > em,
+:root[data-theme="dark"] #root .workspace .risks > button > em strong {
+  color: #f1e8d0 !important;
+}
+:root[data-theme="dark"] #root .workspace .risks > button:nth-of-type(4n+1) > span,
+:root[data-theme="dark"] #root .workspace .risks > button:nth-of-type(4n+1) > em {
+  color: #f7e7a9 !important;
+}
+:root[data-theme="dark"] #root .workspace .risks > button:nth-of-type(4n+2) > span,
+:root[data-theme="dark"] #root .workspace .risks > button:nth-of-type(4n+2) > em {
+  color: #c8eee2 !important;
+}
+:root[data-theme="dark"] #root .workspace .risks > button:nth-of-type(4n+3) > span,
+:root[data-theme="dark"] #root .workspace .risks > button:nth-of-type(4n+3) > em {
+  color: #f4d9c9 !important;
+}
+:root[data-theme="dark"] #root .workspace .risks > button:nth-of-type(4n+4) > span,
+:root[data-theme="dark"] #root .workspace .risks > button:nth-of-type(4n+4) > em {
+  color: #ded8fa !important;
+}
+
+/* Ensure both ends of dependency rows are readable */
+:root[data-theme="dark"] #root .workspace .edges > div,
+:root[data-theme="dark"] #root .workspace .edges > div > span,
+:root[data-theme="dark"] #root .workspace .edges > div > button {
+  color: #f1e8d0 !important;
+}
+:root[data-theme="dark"] #root .workspace .edges > div > button {
+  color: #f276c6 !important;
+}
+
+/* Cream-colored offset shadows; borders stay unchanged */
+:root[data-theme="dark"] #root .landing .hero,
+:root[data-theme="dark"] #root .landing .repoform,
+:root[data-theme="dark"] #root .landing .art,
+:root[data-theme="dark"] #root .landing .capabilities,
+:root[data-theme="dark"] #root .landing .caps article,
+:root[data-theme="dark"] #root .workspace .overview-facts button,
+:root[data-theme="dark"] #root .workspace .beginner-guide,
+:root[data-theme="dark"] #root .workspace .beginner-guide article,
+:root[data-theme="dark"] #root .workspace .overview-map,
+:root[data-theme="dark"] #root .workspace .overview-map-heading button,
+:root[data-theme="dark"] #root .workspace .overview-language,
+:root[data-theme="dark"] #root .workspace .overview-files,
+:root[data-theme="dark"] #root .workspace .overview-files > button,
+:root[data-theme="dark"] #root .workspace .filepage,
+:root[data-theme="dark"] #root .workspace .filepage aside,
+:root[data-theme="dark"] #root .workspace .codepanel,
+:root[data-theme="dark"] #root .workspace .largegraph,
+:root[data-theme="dark"] #root .workspace .edges,
+:root[data-theme="dark"] #root .workspace .insight,
+:root[data-theme="dark"] #root .workspace .risks,
+:root[data-theme="dark"] #root .workspace .risks > button,
+:root[data-theme="dark"] #root .workspace .ask-panel,
+:root[data-theme="dark"] #root .workspace .ask-beginner,
+:root[data-theme="dark"] #root .workspace .ask-question-grid > button,
+:root[data-theme="dark"] #root .workspace .compare-form,
+:root[data-theme="dark"] #root .workspace .compare-result,
+:root[data-theme="dark"] #root .workspace .risk-model,
+:root[data-theme="dark"] #root .account-profile,
+:root[data-theme="dark"] #root .account-repo,
+:root[data-theme="dark"] #root .account-empty {
+  box-shadow: 4px 5px 0 #d8cdaf !important;
+}
+/* Make insight-card headings readable in dark mode */
+:root[data-theme="dark"] #root .workspace .insgrid .insight .paneltitle,
+:root[data-theme="dark"] #root .workspace .insgrid .insight .paneltitle > small {
+  color: #c4b796 !important;
+}

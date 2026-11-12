@@ -1,4 +1,4 @@
-﻿import os
+import os
 from pathlib import Path
 
 def _load_env_file():
@@ -33,6 +33,8 @@ class Settings:
     ollama_chat_model = os.getenv("OLLAMA_CHAT_MODEL", "qwen2.5-coder:3b")
     ollama_embedding_model = os.getenv("OLLAMA_EMBEDDING_MODEL", "embeddinggemma")
 
+    gemini_api_key = os.getenv("GEMINI_API_KEY", "").strip()
+    gemini_model = os.getenv("GEMINI_MODEL", "gemini-3.5-flash-lite").strip()
     @property
     def ollama_enabled(self):
         from urllib.parse import urlparse

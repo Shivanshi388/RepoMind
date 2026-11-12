@@ -48,7 +48,7 @@ def chat(repo_id:str,body:Question):
  r=require(repo_id);evidence=retrieve(r,body.question,limit=4,semantic=True)
  if not evidence:return {"answer":"I could not find relevant repository evidence for that question.","citations":[],"model_available":False}
  answer=local_chat(body.question,evidence)
- return {"answer":answer or "Local model unavailable. I found the evidence below; configure a local Ollama model to generate an explanation.","citations":[{"path":x["path"],"start_line":x["start_line"],"end_line":x["end_line"]} for x in evidence],"model_available":bool(answer),"grounded":True}
+ return {"answer":answer or "Gemini is unavailable. The repository evidence is shown below; check the backend Gemini configuration.","citations":[{"path":x["path"],"start_line":x["start_line"],"end_line":x["end_line"]} for x in evidence],"model_available":bool(answer),"grounded":True}
 @router.post("/{repo_id:path}/debug")
 def debug(repo_id:str,body:Question):
  r=require(repo_id);result=debug_evidence(r,body.question);answer=local_chat(body.question,result["evidence"],"Provide plausible debugging hypotheses and concrete inspection steps. Label hypotheses clearly.")

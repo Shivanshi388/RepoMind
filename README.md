@@ -46,7 +46,7 @@ Browse a project visually, ask plain-English questions about its source, and fol
 
 New codebases can be difficult to understand, especially when you are unfamiliar with the project or with GitHub. RepoMind creates a navigable snapshot of a public repository so people can see how its files relate, search its source, and explore important areas.
 
-The interface is designed for both experienced developers and people who are new to repositories. Beginner-friendly explanations are available alongside file, architecture, search, review, and change views.
+The interface is designed for both experienced developers and people who are new to repositories. It includes beginner-friendly guidance, a light/dark theme toggle, and file, architecture, search, review, and change views.
 
 <div align="center">
 
@@ -134,7 +134,7 @@ The interface is designed for both experienced developers and people who are new
 * Ask questions in natural English about the analyzed repository.
 * Choose starter questions if you are new to code or GitHub.
 * Receive citations that link to relevant files and line ranges.
-* When local AI is unavailable, RepoMind can still show retrieved evidence; generated explanations require Ollama.
+* Ask questions in natural English and get source-grounded answers with citations. Gemini can generate explanations when configured; Ollama is available as a local fallback, and retrieved evidence remains visible if neither model is available.
 
 </details>
 
@@ -164,8 +164,10 @@ flowchart LR
     ANALYZE --> CACHE[(Process-local analysis cache)]
     CACHE --> VIEWS[Files, graph, search, insights, and changes]
     CACHE --> RETRIEVAL[BM25 source retrieval]
-    RETRIEVAL -->|Optional local requests| OLLAMA[Ollama chat and embeddings]
-    OLLAMA --> ANSWER[Grounded answer with citations]
+    RETRIEVAL -->|If configured| GEMINI[Gemini API for answer generation]
+    RETRIEVAL -->|Optional local fallback and embeddings| OLLAMA[Local Ollama]
+    GEMINI --> ANSWER[Grounded answer with citations]
+    OLLAMA --> ANSWER
     VIEWS --> UI
     ANSWER --> UI
 ```
@@ -207,7 +209,8 @@ flowchart LR
 | 🗄️ Account data | MongoDB | User profiles and saved repository summaries |
 | 🧩 Parsing | Python AST, Tree-sitter where available | Extract source structure and imports |
 | 📈 Review signals | scikit-learn and static measurements | History-based relative ranking and file signals |
-| 💬 Local AI | Ollama, optional | Source-grounded chat and optional embedding reranking |
+| 💬 Answer generation | Google Gemini API, optional | Generate repository-grounded explanations when configured |
+| 🧠 Local models | Ollama, optional | Local chat fallback and optional embedding reranking |
 | 🔎 Retrieval | BM25 lexical retrieval | Find source excerpts relevant to a question |
 
 </div>
@@ -251,7 +254,8 @@ RepoMind/
 * Git
 * MongoDB connection string
 * GitHub OAuth application
-* Ollama is optional; it is needed for generated AI explanations and embedding reranking.
+* Gemini API key for hosted answer generation (optional)
+* Ollama for local chat fallback or embedding reranking (optional)
 
 ### 1. Clone the repository
 
@@ -270,7 +274,7 @@ python -m pip install -r requirements.txt
 Copy-Item .env.example .env
 ```
 
-Open `backend/.env` and add your own values for these required settings:
+Open `backend/.env` and add your own values for the required settings. Gemini settings are optional:
 
 ```dotenv
 GITHUB_CLIENT_ID=
@@ -278,6 +282,9 @@ GITHUB_CLIENT_SECRET=
 AUTH_SECRET_KEY=
 MONGODB_URI=
 MONGODB_DATABASE=repomind_db
+# Optional Gemini-powered repository answers
+GEMINI_API_KEY=
+GEMINI_MODEL=gemini-3.5-flash-lite
 FRONTEND_URL=http://localhost:5173
 ```
 
@@ -311,7 +318,7 @@ npm run dev
 
 Open the Vite address shown in the terminal, usually `http://localhost:5173`.
 
-### Optional: enable local AI
+### Optional: configure Gemini or local AI
 
 Install Ollama, then pull the models configured by default:
 
@@ -320,7 +327,7 @@ ollama pull qwen2.5-coder:3b
 ollama pull embeddinggemma
 ```
 
-RepoMind connects only to loopback Ollama addresses. Chat generation and embedding reranking are optional; without a local model, lexical retrieval and source citations remain available.
+For Gemini-powered answers, set `GEMINI_API_KEY` in `backend/.env` and restart the backend. Keep the key private and never commit it. `GEMINI_MODEL` defaults to `gemini-3.5-flash-lite`. When Gemini is not configured or unavailable, RepoMind can use local Ollama chat if enabled. Ollama embedding reranking is optional; source retrieval and citations remain available without either model.
 
 ---
 
@@ -371,7 +378,8 @@ The API is prefixed with `/api/v1`, except for `/health`.
 * GitHub OAuth is required before starting an analysis.
 * MongoDB stores account information and saved repository summaries, not full source snapshots.
 * Full analysis results are held in the backend process cache and are lost when that process restarts.
-* Ollama requests are sent only to a local loopback address; RepoMind does not use a hosted LLM.
+* Gemini answer generation sends the question and retrieved repository context to Google when a Gemini API key is configured. The key stays in the backend environment and should never be committed.
+* Ollama requests use a local loopback address when local models are enabled.
 
 ### Understanding review signals
 
