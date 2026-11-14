@@ -16,6 +16,8 @@ _CACHE_MAX_BYTES = 16 * 1024 * 1024
 _GET_CACHE = OrderedDict()
 _GET_CACHE_BYTES = 0
 _CACHE_LOCK = threading.Lock()
+_RATE_LIMIT_UNTIL = 0.0
+_RATE_LIMIT_LOCK = threading.Lock()
 
 
 class GitHubError(Exception):
@@ -105,6 +107,27 @@ def _raise_if_rate_limited(response):
         else:
             wait_text = f"{wait_seconds} seconds"
 
+        global _RATE_LIMIT_UNTIL
+        with _RATE_LIMIT_LOCK:
+            _RATE_LIMIT_UNTIL = max(
+                _RATE_LIMIT_UNTIL,
+                time.time() + wait_seconds,
+            )
+        raise GitHubError(
+            f"GitHub's API rate limit was reached. Try again in {wait_text}.",
+            429,
+        )
+
+
+def _check_rate_limit_cooldown():
+    with _RATE_LIMIT_LOCK:
+        remaining = _RATE_LIMIT_UNTIL - time.time()
+    if remaining > 0:
+        wait_seconds = max(1, int(remaining + 0.999))
+        if wait_seconds >= 60:
+            wait_text = f"about {(wait_seconds + 59) // 60} minutes"
+        else:
+            wait_text = f"{wait_seconds} seconds"
         raise GitHubError(
             f"GitHub's API rate limit was reached. Try again in {wait_text}.",
             429,
@@ -133,6 +156,7 @@ class GitHubClient:
         if cached is not None:
             return cached
 
+        _check_rate_limit_cooldown()
         try:
             response = self.client.get(path)
         except httpx.HTTPError as exc:
@@ -163,6 +187,7 @@ class GitHubClient:
 
     def archive(self, owner, repo, sha, limit):
         url = f"{API}/repos/{owner}/{repo}/zipball/{sha}"
+        _check_rate_limit_cooldown()
         try:
             response = self.client.get(url, follow_redirects=False)
             _raise_if_rate_limited(response)
